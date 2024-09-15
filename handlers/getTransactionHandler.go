@@ -116,7 +116,7 @@ func GetTransaction(c *gin.Context) {
 				"amount":            float64(bodySPL.Instructions[2].Parsed.TransferChecked.Amount) / math.Pow(10, float64(bodySPL.Instructions[2].Parsed.TransferChecked.Decimals)),
 				"blockNumber":       bodySPL.BlockNumber,
 				"transactionStatus": bodySPL.Meta.Status.Ok == nil,
-				"blockTime":         bodySolana.Blocktime.Absolute,
+				"blockTime":         bodySPL.Blocktime.Absolute,
 			}
 
 			c.JSON(http.StatusOK, response)
