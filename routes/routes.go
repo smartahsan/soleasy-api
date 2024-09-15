@@ -8,7 +8,6 @@ import (
 
 func SetupRoutes(router *gin.Engine) {
 
-	// getTransaction route
 	router.GET("/getTransaction/:signature", handlers.GetTransaction)
 
 	router.GET("/getBlockNumber", handlers.GetBlockNumber)

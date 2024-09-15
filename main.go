@@ -10,9 +10,7 @@ import (
 func main() {
 	router := gin.Default()
 
-	// Initialize routes
 	routes.SetupRoutes(router)
 
-	// Start the server
 	router.Run(":8080")
 }
