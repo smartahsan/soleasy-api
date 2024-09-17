@@ -126,6 +126,7 @@ func GetTransaction(c *gin.Context) {
 
 	case 429:
 		c.JSON(resp.StatusCode, gin.H{"error": "Failed to fetch transaction", "details": "Rate limit exceeded"})
+		fmt.Println(resp.Body)
 		return
 	default:
 		c.JSON(resp.StatusCode, gin.H{"error": "Failed to fetch transaction", "details": "Unknown error", "statusCode": statusCode})
