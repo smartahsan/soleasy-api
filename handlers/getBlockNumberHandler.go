@@ -23,18 +23,9 @@ func GetBlockNumber(c *gin.Context) {
 	}
 
 	req.Header.Set("Accept", "*/*")
-	req.Header.Set("Accept-Language", "en-US,en;q=0.9")
 	req.Header.Set("Content-Type", "application/json")
-	req.Header.Set("If-None-Match", `W/"aa8-FWgvG9s4kXEyrgfi70cigsvXXM8"`)
 	req.Header.Set("Origin", "https://solanabeach.io")
-	req.Header.Set("Priority", "u=1, i")
 	req.Header.Set("Referer", "https://solanabeach.io/")
-	req.Header.Set("Sec-CH-UA", `"Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"`)
-	req.Header.Set("Sec-CH-UA-Mobile", "?0")
-	req.Header.Set("Sec-CH-UA-Platform", `"Windows"`)
-	req.Header.Set("Sec-Fetch-Dest", "empty")
-	req.Header.Set("Sec-Fetch-Mode", "cors")
-	req.Header.Set("Sec-Fetch-Site", "same-site")
 
 	client := &http.Client{}
 
